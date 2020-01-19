@@ -1,0 +1,6 @@
+- args:
+    sql: "\n           alter table \"public\".\"product\"\n           add constraint
+      \"product_imageI_id_fkey\"\n           foreign key (\"imageI_id\")\n           references
+      \"public\".\"image\"\n           (\"id\") on update set null on delete set null;\n
+      \     "
+  type: run_sql

@@ -1,0 +1,6 @@
+- args:
+    sql: ALTER TABLE "public"."customer" ALTER COLUMN "total_order_amount" TYPE integer;
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "public"."customer"."total_order_amount" IS E'null'
+  type: run_sql

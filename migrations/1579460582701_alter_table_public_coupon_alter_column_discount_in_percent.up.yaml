@@ -1,0 +1,6 @@
+- args:
+    sql: ALTER TABLE "public"."coupon" ALTER COLUMN "discount_in_percent" TYPE int4;
+  type: run_sql
+- args:
+    sql: COMMENT ON COLUMN "public"."coupon"."discount_in_percent" IS E''
+  type: run_sql

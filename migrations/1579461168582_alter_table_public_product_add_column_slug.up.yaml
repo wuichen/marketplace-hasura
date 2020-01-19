@@ -1,0 +1,3 @@
+- args:
+    sql: ALTER TABLE "public"."product" ADD COLUMN "slug" text NULL;
+  type: run_sql

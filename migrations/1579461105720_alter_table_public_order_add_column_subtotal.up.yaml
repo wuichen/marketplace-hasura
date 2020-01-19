@@ -1,0 +1,3 @@
+- args:
+    sql: ALTER TABLE "public"."order" ADD COLUMN "subtotal" numeric NULL;
+  type: run_sql

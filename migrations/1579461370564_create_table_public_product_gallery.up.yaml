@@ -1,0 +1,11 @@
+- args:
+    sql: CREATE TABLE "public"."product_gallery"("product_id" uuid NOT NULL, "image_id"
+      uuid NOT NULL, PRIMARY KEY ("product_id","image_id") , FOREIGN KEY ("image_id")
+      REFERENCES "public"."image"("id") ON UPDATE cascade ON DELETE cascade, FOREIGN
+      KEY ("product_id") REFERENCES "public"."product"("id") ON UPDATE cascade ON
+      DELETE cascade);
+  type: run_sql
+- args:
+    name: product_gallery
+    schema: public
+  type: add_existing_table_or_view

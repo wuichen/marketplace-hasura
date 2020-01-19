@@ -1,0 +1,3 @@
+- args:
+    sql: ALTER TABLE "public"."order" ADD COLUMN "total" numeric NULL;
+  type: run_sql

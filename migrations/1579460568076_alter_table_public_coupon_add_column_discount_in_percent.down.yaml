@@ -1,0 +1,3 @@
+- args:
+    sql: ALTER TABLE "public"."coupon" DROP COLUMN "discount_in_percent";
+  type: run_sql

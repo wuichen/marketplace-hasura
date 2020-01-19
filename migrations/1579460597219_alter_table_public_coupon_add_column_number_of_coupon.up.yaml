@@ -1,0 +1,3 @@
+- args:
+    sql: ALTER TABLE "public"."coupon" ADD COLUMN "number_of_coupon" integer NULL;
+  type: run_sql
