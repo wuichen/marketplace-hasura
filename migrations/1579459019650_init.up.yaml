@@ -1,0 +1,578 @@
+- args:
+    allowlist: []
+    functions: []
+    query_collections: []
+    remote_schemas: []
+    tables:
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: customer
+        using:
+          foreign_key_constraint_on: customer_id
+      select_permissions: []
+      table: address
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: customer
+        using:
+          foreign_key_constraint_on: customer_id
+      select_permissions: []
+      table: card
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: categories
+        using:
+          foreign_key_constraint_on:
+            column: parent_category_id
+            table: category
+      - comment: null
+        name: product_categories
+        using:
+          foreign_key_constraint_on:
+            column: category_id
+            table: product_category
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: category
+        using:
+          foreign_key_constraint_on: parent_category_id
+      select_permissions: []
+      table: category
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: product
+        using:
+          foreign_key_constraint_on: product_id
+      - comment: null
+        name: section
+        using:
+          foreign_key_constraint_on: section_id
+      select_permissions: []
+      table: collection
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: customer
+        using:
+          foreign_key_constraint_on: customer_id
+      select_permissions: []
+      table: contact
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: product_coupons
+        using:
+          foreign_key_constraint_on:
+            column: coupon_id
+            table: product_coupon
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships: []
+      select_permissions: []
+      table: coupon
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: addresses
+        using:
+          foreign_key_constraint_on:
+            column: customer_id
+            table: address
+      - comment: null
+        name: cards
+        using:
+          foreign_key_constraint_on:
+            column: customer_id
+            table: card
+      - comment: null
+        name: contacts
+        using:
+          foreign_key_constraint_on:
+            column: customer_id
+            table: contact
+      - comment: null
+        name: orders
+        using:
+          foreign_key_constraint_on:
+            column: customer_id
+            table: order
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships: []
+      select_permissions: []
+      table: customer
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: image
+        using:
+          foreign_key_constraint_on: image_id
+      - comment: null
+        name: section
+        using:
+          foreign_key_constraint_on: section_id
+      select_permissions: []
+      table: gallery
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: galleries
+        using:
+          foreign_key_constraint_on:
+            column: image_id
+            table: gallery
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships: []
+      select_permissions: []
+      table: image
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: order_line_items
+        using:
+          foreign_key_constraint_on:
+            column: order_id
+            table: order_line_item
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: customer
+        using:
+          foreign_key_constraint_on: customer_id
+      select_permissions: []
+      table: order
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: order
+        using:
+          foreign_key_constraint_on: order_id
+      select_permissions: []
+      table: order_line_item
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: sections
+        using:
+          foreign_key_constraint_on:
+            column: page_id
+            table: section
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: site
+        using:
+          foreign_key_constraint_on: site_id
+      select_permissions: []
+      table: page
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: collections
+        using:
+          foreign_key_constraint_on:
+            column: product_id
+            table: collection
+      - comment: null
+        name: product_categories
+        using:
+          foreign_key_constraint_on:
+            column: product_id
+            table: product_category
+      - comment: null
+        name: product_coupons
+        using:
+          foreign_key_constraint_on:
+            column: product_id
+            table: product_coupon
+      - comment: null
+        name: product_options
+        using:
+          foreign_key_constraint_on:
+            column: product_id
+            table: product_option
+      - comment: null
+        name: variants
+        using:
+          foreign_key_constraint_on:
+            column: product_id
+            table: variant
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships: []
+      select_permissions: []
+      table: product
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: category
+        using:
+          foreign_key_constraint_on: category_id
+      - comment: null
+        name: product
+        using:
+          foreign_key_constraint_on: product_id
+      select_permissions: []
+      table: product_category
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: coupon
+        using:
+          foreign_key_constraint_on: coupon_id
+      - comment: null
+        name: product
+        using:
+          foreign_key_constraint_on: product_id
+      select_permissions: []
+      table: product_coupon
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: product
+        using:
+          foreign_key_constraint_on: product_id
+      select_permissions: []
+      table: product_option
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: collections
+        using:
+          foreign_key_constraint_on:
+            column: section_id
+            table: collection
+      - comment: null
+        name: galleries
+        using:
+          foreign_key_constraint_on:
+            column: section_id
+            table: gallery
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: page
+        using:
+          foreign_key_constraint_on: page_id
+      select_permissions: []
+      table: section
+      update_permissions: []
+    - array_relationships: []
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: variant
+        using:
+          foreign_key_constraint_on: variant_id
+      select_permissions: []
+      table: selected_option
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: pages
+        using:
+          foreign_key_constraint_on:
+            column: site_id
+            table: page
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships: []
+      select_permissions: []
+      table: site
+      update_permissions: []
+    - array_relationships:
+      - comment: null
+        name: selected_options
+        using:
+          foreign_key_constraint_on:
+            column: variant_id
+            table: selected_option
+      computed_fields: []
+      configuration:
+        custom_column_names: {}
+        custom_root_fields:
+          delete: null
+          insert: null
+          select: null
+          select_aggregate: null
+          select_by_pk: null
+          update: null
+      delete_permissions: []
+      event_triggers: []
+      insert_permissions: []
+      is_enum: false
+      object_relationships:
+      - comment: null
+        name: product
+        using:
+          foreign_key_constraint_on: product_id
+      select_permissions: []
+      table: variant
+      update_permissions: []
+    version: 2
+  type: replace_metadata
